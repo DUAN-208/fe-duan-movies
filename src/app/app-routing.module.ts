@@ -5,6 +5,7 @@ import { BaseLayoutAuthComponent } from './layouts/base-layout-auth/base-layout-
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { MoviesDetailPageComponent } from './pages/movies-detail-page/movies-detail-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { SignupPageComponent } from './pages/signup-page/signup-page.component';
 
 const routes: Routes = [
   {path:'',component:BaseLayoutClientComponent,children:[
@@ -12,7 +13,8 @@ const routes: Routes = [
     {path:'movies/:id',component:MoviesDetailPageComponent}
   ]},
   {path:'',component:BaseLayoutAuthComponent,children:[
-    {path: 'login',component:LoginPageComponent}
+    {path: 'login',component:LoginPageComponent},
+    {path: 'signup',component:SignupPageComponent}
   ]}
 ];
 

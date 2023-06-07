@@ -1,4 +1,4 @@
-.form-login{
+.form-signup{
   max-width: 450px;
   min-height: 660px;
   margin: 0 auto;
@@ -7,19 +7,19 @@
   border-radius: 16px;
 
 }
-.form-login .title-login{
+.form-signup .title-signup{
   color: #fff;
   font-size: 20px;
   font-weight: 700;
   padding: 20px 0px;
 }
-.form-login .user-box {
+.form-signup .user-box {
   position: relative;
   margin: 10px 0px;
 
 }
 
-.form-login .user-box input {
+.form-signup .user-box input {
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
@@ -30,7 +30,7 @@
   outline: none;
   background: transparent;
 }
-.form-login .user-box label {
+.form-signup .user-box label {
   position: absolute;
   top:0;
   left: 0;
@@ -41,14 +41,14 @@
   transition: .5s;
 }
 
-.form-login .user-box input:focus ~ label,
-.form-login .user-box input:valid ~ label {
+.form-signup .user-box input:focus ~ label,
+.form-signup .user-box input:valid ~ label {
   top: -20px;
   left: 0;
   color: #676767;
   font-size: 16px;
 }
-.form-login .btn-login{
+.form-signup .btn-signup{
   background-color: #e50914;
   width: 100%;
   padding: 16px;
@@ -58,10 +58,10 @@
   margin: 24px 0 12px;
   color: #fff;
 }
-.form-login .login-des{
+.form-signup .signup-des{
   display: flex;
   color: #fff;
   margin-top: 20px;
-  font-size: 14px;
+  font-size: 13px;
   gap: 10px;
 }
