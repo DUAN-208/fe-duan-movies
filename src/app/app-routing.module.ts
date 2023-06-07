@@ -19,9 +19,6 @@ const routes: Routes = [
   {path:'',component:BaseLayoutAuthComponent,children:[
     {path: 'login',component:LoginPageComponent},
     {path: 'signup',component:SignupPageComponent}
-  ]}
-
-    
   ]},
   {path:'**',component:NotFoundComponent}
 
