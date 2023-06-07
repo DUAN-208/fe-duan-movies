@@ -10,7 +10,9 @@ import { BannerMovieComponent } from './components/banner-movie/banner-movie.com
 import { ListMovieComponent } from './components/list-movie/list-movie.component';
 import { MoviesDetailPageComponent } from './pages/movies-detail-page/movies-detail-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { SignupPageComponent } from './pages/signup-page/signup-page.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     ListMovieComponent,
     MoviesDetailPageComponent,
     LoginPageComponent,
+    SignupPageComponent,
     NotFoundComponent
+
   ],
   imports: [
     BrowserModule,
