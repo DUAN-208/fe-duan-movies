@@ -13,6 +13,8 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { SignupPageComponent } from './pages/signup-page/signup-page.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { MoviesPageComponent } from './pages/movies-page/movies-page.component';
+import { AdminNavComponent } from './components/admin-nav/admin-nav.component';
+import { BaseLayoutAdminComponent } from './layouts/base-layout-admin/base-layout-admin.component';
 
 
 @NgModule({
@@ -27,8 +29,9 @@ import { MoviesPageComponent } from './pages/movies-page/movies-page.component';
     LoginPageComponent,
     SignupPageComponent,
     NotFoundComponent,
-    MoviesPageComponent
-
+    MoviesPageComponent,
+    AdminNavComponent,
+    BaseLayoutAdminComponent,
   ],
   imports: [
     BrowserModule,
