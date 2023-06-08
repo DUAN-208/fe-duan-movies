@@ -16,6 +16,7 @@ import { MoviesPageComponent } from './pages/movies-page/movies-page.component';
 import { AdminNavComponent } from './components/admin-nav/admin-nav.component';
 import { BaseLayoutAdminComponent } from './layouts/base-layout-admin/base-layout-admin.component';
 import { ListMoviesComponent } from './pages/admin/list-movies/list-movies.component';
+import { ListUserComponent } from './pages/admin/list-user/list-user.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { ListMoviesComponent } from './pages/admin/list-movies/list-movies.compo
     AdminNavComponent,
     BaseLayoutAdminComponent,
     ListMoviesComponent,
+    ListUserComponent,
   ],
   imports: [
     BrowserModule,
