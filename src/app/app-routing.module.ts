@@ -9,11 +9,13 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { SignupPageComponent } from './pages/signup-page/signup-page.component';
 
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { MoviesPageComponent } from './pages/movies-page/movies-page.component';
 
 
 const routes: Routes = [
   {path:'',component:BaseLayoutClientComponent,children:[
     {path:'',component:HomePageComponent},
+    {path:'movies',component:MoviesPageComponent},
     {path:'movies/:id',component:MoviesDetailPageComponent}
   ]},
   {path:'',component:BaseLayoutAuthComponent,children:[

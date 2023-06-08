@@ -12,6 +12,7 @@ import { MoviesDetailPageComponent } from './pages/movies-detail-page/movies-det
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { SignupPageComponent } from './pages/signup-page/signup-page.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { MoviesPageComponent } from './pages/movies-page/movies-page.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     MoviesDetailPageComponent,
     LoginPageComponent,
     SignupPageComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    MoviesPageComponent
 
   ],
   imports: [
