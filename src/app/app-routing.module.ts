@@ -11,6 +11,7 @@ import { SignupPageComponent } from './pages/signup-page/signup-page.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { MoviesPageComponent } from './pages/movies-page/movies-page.component';
 import { BaseLayoutAdminComponent } from './layouts/base-layout-admin/base-layout-admin.component';
+import { ListMoviesComponent } from './pages/admin/list-movies/list-movies.component';
 
 
 
@@ -25,6 +26,7 @@ const routes: Routes = [
     {path: 'signup',component:SignupPageComponent}
   ]},
   {path:'admin',component:BaseLayoutAdminComponent,children:[
+    {path: 'list-movies', component:ListMoviesComponent }
   ]},
   {path:'**',component:NotFoundComponent}
 
