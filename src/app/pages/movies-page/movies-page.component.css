@@ -1,0 +1,173 @@
+.movies__container .movies-option {
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+    margin: 20px 10px;
+  }
+  .movies-option .movies-option-item a {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    background-color: transparent;
+    outline: 0px;
+    border: 0px;
+    margin: 0px;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: middle;
+    appearance: none;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.75;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+      box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+      border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+      color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    box-shadow: none;
+    min-width: 71px;
+    padding: 6px 16px;
+  }
+  .movies-option .movies-option-item:hover a {
+    background-color: rgba(255, 0, 0, 0.08);
+  }
+  .movies-option .movies-option-item:active a {
+    background-color: #ff0000;
+  }
+  .listmovies__container {
+    padding: 0px 24px;
+    margin-top: 80px;
+  }
+  
+  .list-movies {
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    line-height: 24px;
+  }
+  .card-movies {
+    height: 30rem;
+    background-size: cover;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease 0s;
+  }
+  .card-movies-btn {
+    z-index: 10;
+  }
+  .card-movies-btn a {
+    background-color: rgb(255, 0, 0);
+    width: 100px;
+    height: 50px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.4s ease 0s;
+    z-index: 10;
+  }
+  
+  .card-des {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0px 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease 0s;
+  }
+  .card-des .card-point,
+  .card-name,
+  .card-year {
+    margin-bottom: 10px;
+  }
+  .card-des .card-point {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    line-height: 1.43;
+    letter-spacing: 1px;
+    font-weight: 700;
+    border: 3px solid #66bb6a;
+    border-radius: 100%;
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+  }
+  .card-des .card-year {
+    font-size: 16px;
+  }
+  .card-des .card-name {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .card-movies:hover .card-movies-btn a {
+    opacity: 1;
+  }
+  .card-movies:hover .card-des {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+  .card-movies:hover {
+    border: 1px solid rgb(255, 0, 0);
+    background-color: rgb(0, 0, 0, 0.3);
+  }
+  .bg-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+    border-radius: 20px;
+  }
+  .load-more {
+    display: flex;
+    justify-content: center;
+  }
+  .load-more button {
+    align-items: center;
+    border-color: #ff0000;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    color: #ff0000;
+    display: flex;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    justify-content: center;
+    letter-spacing: 0.39998px;
+    line-height: 24.5px;
+    margin: 50px 0px 0px;
+    padding: 5px 20rem;
+    text-align: center;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+  }
+  .load-more button:hover {
+    background-color: rgba(255, 0, 0, 0.08);
+  }
+  .load-more button:active {
+    background-color: #ff0000;
+    color: #ffffff;
+  }
