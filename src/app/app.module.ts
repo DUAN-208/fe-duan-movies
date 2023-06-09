@@ -16,7 +16,10 @@ import { MoviesPageComponent } from './pages/movies-page/movies-page.component';
 import { AdminNavComponent } from './components/admin-nav/admin-nav.component';
 import { BaseLayoutAdminComponent } from './layouts/base-layout-admin/base-layout-admin.component';
 import { ListMoviesComponent } from './pages/admin/list-movies/list-movies.component';
+import { AddMoviesPageComponent } from './pages/admin/add-movies-page/add-movies-page.component';
+
 import { ListUserComponent } from './pages/admin/list-user/list-user.component';
+
 
 
 @NgModule({
@@ -35,6 +38,7 @@ import { ListUserComponent } from './pages/admin/list-user/list-user.component';
     AdminNavComponent,
     BaseLayoutAdminComponent,
     ListMoviesComponent,
+    AddMoviesPageComponent,
     ListUserComponent,
   ],
   imports: [
