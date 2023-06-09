@@ -5,37 +5,33 @@
             <h1>Danh sách Movies</h1>
         </div>
         <div class="page-content">
-            <div class="records table-responsive">
+            <div  class="records table-responsive">
 
                 <div class="record-header">
             <button class="add"><a href="admin/add-movies"> Add Movies</a></button>
-
                 </div>
-
-                <div>
+                <div >
                     <table width="100%">
                         <thead>
                             <tr>
-                                <th>#</th>
-                                <!-- <th> CLIENT</th> -->
+                                <th>STT</th>
                                 <th> Tên Phim</th>
-                                <th> Ảnh</th>
+                                <th style="width: 15%; padding-right: 20px;"> Ảnh</th>
                                 <th> Điểm</th>
                                 <th> Video</th>
-                                <th> Danh mục</th>
                                 <th> Năm</th>
                                 <th> Mô tả</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr >
-                                <td>1</td>
-                                <td>Bom tấn mỹ</td>
-                                <td>đẹp</td>
-                                <td>60</td>
+                            <tr *ngFor="let movies of movies ; index as i" >
+                                <td>{{i + 1}}</td>
+                                <td>{{movies.name}}</td>
+                                <td><img src=" ../../../assets/imgs/card-img1.jpg" alt=""></td>
+                                <td>{{ movies.diem }}</td>
                                 <td>500mb</td>
-                                <td>Phim hành động</td>
-                                <td>Tạo cảm giác hay</td>
+                                <td>{{ movies.nam }}</td>
+                                <td>{{movies.desc}}</td>
                                 <td >
                                     <button class="remove" >Xóa</button> 
                                    <a href="admin/edit-movies"><button class="edit">Edit</button></a> 
