@@ -7,36 +7,17 @@
     </div>
   
     <div class="movies--content">
-      <div class="list-movies">
-        <div
-          class="card-movies"
-          style="background-image: url(
-           ../../../assets/imgs/card-img1.jpg)"
-        >
+      <div  class="list-movies">
+        <div *ngFor="let movies of movies"  
+         class="card-movies" style="background-image: url(../../../assets/imgs/card-img1.jpg)">
           <div class="bg-card"></div>
           <p class="card-movies-btn"><a routerLink="/movies/1">Watch</a></p>
           <div class="card-des">
-            <p class="card-point">66</p>
-            <p class="card-year">2023</p>
-            <p class="card-name">Movies 1</p>
+            <p class="card-point">{{ movies.diem }}</p>
+            <p class="card-year">{{ movies.nam }}</p>
+            <p class="card-name">{{ movies.name }}</p>
           </div>
         </div>
-        <div
-     
-        class="card-movies"
-        style="background-image: url(
-         ../../../assets/imgs/card-img1.jpg)"
-      >
-        <div class="bg-card"></div>
-        <p class="card-movies-btn"><a routerLink="/movies/1">Watch</a></p>
-        <div class="card-des">
-          <p class="card-point">6</p>
-          <p class="card-year">2023</p>
-          <p class="card-name">Movies 1</p>
-        </div>
-      </div>
-      </div>
-      
     </div>
     <div class="load-more">
       <button>Load Moreee</button>

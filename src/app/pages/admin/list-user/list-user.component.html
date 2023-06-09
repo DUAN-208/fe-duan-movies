@@ -9,7 +9,6 @@
 
               <div class="record-header">
               </div>
-
               <div>
                   <table width="100%">
                       <thead>
@@ -24,26 +23,22 @@
                           </tr>
                       </thead>
                       <tbody>
-                          <tr >
-                              <td>1</td>
-                              <td>Việt Phương</td>
-                              <td>phuongnvph21844@fpt.edu.vn</td>
-                              <td>12345</td>
-                              <td>0</td>
+                          <tr  *ngFor="let users of users ; index as i" >
+                              <td>{{ i + 1}}</td>
+                              <td>{{ users.name}}</td>
+                              <td>{{ users.email}}</td>
+                              <td>{{ users.password}}</td>
+                              <td>{{ users.role}}</td>
                               <td >
                                   <button class="remove" >Xóa</button>
                                   <button class="edit">Edit</button>
                               </td>
                           </tr>
-
                       </tbody>
                   </table>
               </div>
 
           </div>
-
       </div>
-
   </main>
-
 </div>

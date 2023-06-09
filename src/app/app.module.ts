@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {HttpClientModule} from '@angular/common/http';
-import { FormsModule,ReactiveFormsModule } from '@angular/forms';
-
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms'
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -24,6 +24,7 @@ import { AddMoviesPageComponent } from './pages/admin/add-movies-page/add-movies
 
 import { ListUserComponent } from './pages/admin/list-user/list-user.component';
 import { EditMoviesPageComponent } from './pages/admin/edit-movies-page/edit-movies-page.component';
+
 
 
 
@@ -50,9 +51,9 @@ import { EditMoviesPageComponent } from './pages/admin/edit-movies-page/edit-mov
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule ,
   ],
   providers: [],
   bootstrap: [AppComponent]
