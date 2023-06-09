@@ -550,8 +550,11 @@ table tbody tr {
     border: 1px solid;
     padding: 10px 10px 10px 10px;
     background: rgb(0, 0, 0);
-   color: white;
    border-radius: 10px;
+}
+.add a{
+   color: white;
+
 }
 
 

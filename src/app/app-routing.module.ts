@@ -12,6 +12,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { MoviesPageComponent } from './pages/movies-page/movies-page.component';
 import { BaseLayoutAdminComponent } from './layouts/base-layout-admin/base-layout-admin.component';
 import { ListMoviesComponent } from './pages/admin/list-movies/list-movies.component';
+import { AddMoviesPageComponent } from './pages/admin/add-movies-page/add-movies-page.component';
 
 
 
@@ -26,7 +27,8 @@ const routes: Routes = [
     {path: 'signup',component:SignupPageComponent}
   ]},
   {path:'admin',component:BaseLayoutAdminComponent,children:[
-    {path: 'list-movies', component:ListMoviesComponent }
+    {path: 'list-movies', component:ListMoviesComponent },
+    {path:'add-movies',component:AddMoviesPageComponent}
   ]},
   {path:'**',component:NotFoundComponent}
 
