@@ -9,7 +9,7 @@ import { IMovie } from '../interfaces/movie';
 export class MoviesService {
 
   constructor(private http:HttpClient) { }
-  addProduct(movie:IMovie):Observable<any> {
+  AddMovies(movie:IMovie):Observable<any> {
     return this.http.post('http://localhost:8080/api/movies',movie)
    }
 }
