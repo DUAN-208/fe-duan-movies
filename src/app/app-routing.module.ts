@@ -14,6 +14,7 @@ import { BaseLayoutAdminComponent } from './layouts/base-layout-admin/base-layou
 import { ListMoviesComponent } from './pages/admin/list-movies/list-movies.component';
 import { AddMoviesPageComponent } from './pages/admin/add-movies-page/add-movies-page.component';
 import { ListUserComponent } from './pages/admin/list-user/list-user.component';
+import { EditMoviesPageComponent } from './pages/admin/edit-movies-page/edit-movies-page.component';
 
 
 
@@ -31,8 +32,8 @@ const routes: Routes = [
   {path:'admin',component:BaseLayoutAdminComponent,children:[
     {path: 'list-movies', component:ListMoviesComponent },
     {path:'add-movies',component:AddMoviesPageComponent},
-    {path: 'list-user', component:ListUserComponent}
-
+    {path: 'list-user', component:ListUserComponent},
+    {path:'edit-movies',component:EditMoviesPageComponent},
   ]},
   {path:'**',component:NotFoundComponent}
 
