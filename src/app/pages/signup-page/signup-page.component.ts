@@ -29,7 +29,7 @@ export class SignupPageComponent {
     onHandldeSignup() {
       if (this.formSignup.valid) {
         this.authSingup.signup(this.formSignup.value).subscribe(data => {
-          console.log(data);
+          
           
           if(!data.user){
             Swal.fire('Thất bại', 'Đăng kí tài khoản thất bại!', 'info');
