@@ -16,9 +16,6 @@ import { AddMoviesPageComponent } from './pages/admin/add-movies-page/add-movies
 import { ListUserComponent } from './pages/admin/list-user/list-user.component';
 import { EditMoviesPageComponent } from './pages/admin/edit-movies-page/edit-movies-page.component';
 
-
-
-
 const routes: Routes = [
   {path:'',component:BaseLayoutClientComponent,children:[
     {path:'',component:HomePageComponent},
@@ -30,6 +27,7 @@ const routes: Routes = [
     {path: 'signup',component:SignupPageComponent}
   ]},
   {path:'admin',component:BaseLayoutAdminComponent,children:[
+    { path: "", redirectTo: "list-movies", pathMatch: "full" },
     {path: 'list-movies', component:ListMoviesComponent },
     {path:'add-movies',component:AddMoviesPageComponent},
     {path: 'list-user', component:ListUserComponent},

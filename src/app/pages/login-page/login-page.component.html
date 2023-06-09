@@ -1,11 +1,11 @@
-<form action="" class="form-login">
+<form action="" class="form-login" (ngSubmit)="onHandleLogin()" [formGroup]="formLogin">
   <h5 class="title-login">Đăng nhập</h5>
   <div class="user-box">
-          <input type="email" name="email" required="">
+          <input type="email" name="email" required="" formControlName="email">
           <label>Email</label>
   </div>
   <div class="user-box">
-          <input type="password" name="" required="">
+          <input type="password" name="" required="" formControlName="password">
           <label>Password</label>
   </div>
   <button type="submit" class="btn-login">Đăng nhập</button>
