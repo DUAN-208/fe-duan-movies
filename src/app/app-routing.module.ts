@@ -27,6 +27,7 @@ const routes: Routes = [
     {path: 'signup',component:SignupPageComponent}
   ]},
   {path:'admin',component:BaseLayoutAdminComponent,children:[
+    { path: "", redirectTo: "list-movies", pathMatch: "full" },
     {path: 'list-movies', component:ListMoviesComponent },
     {path:'add-movies',component:AddMoviesPageComponent},
     {path: 'list-user', component:ListUserComponent},

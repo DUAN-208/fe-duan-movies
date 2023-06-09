@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BaseLayoutClientComponent } from './layouts/base-layout-client/base-layout-client.component';
@@ -52,7 +53,7 @@ import { EditMoviesPageComponent } from './pages/admin/edit-movies-page/edit-mov
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule 
+    HttpClientModule ,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,8 +1,9 @@
 export interface IMovie{
-    _id ?: number| string,
-    name : string,
-    img : string,
-    diem : number,
-    nam :number,
-    desc : string,
+        _id?:string|number
+        name:string ,
+        img:string,
+        diem:string|number ,
+        nam:string |number,
+        video:string ,
+        desc:string ,
 }
