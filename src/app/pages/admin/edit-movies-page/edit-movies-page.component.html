@@ -3,27 +3,27 @@
     <form>
       <div class="form-group">
         <label for="movie-name">Tên phim:</label>
-        <input type="text" id="movie-name" name="movie-name" required>
+        <input type="text" formControlName="name"  placeholder="Tên" class="form-control">
       </div>
       <div class="form-group">
         <label for="movie-image">Ảnh phim:</label>
-        <input type="file" id="movie-image" name="movie-image" required>
+        <input type="file" formControlName="img" placeholder="img"  class="form-control"  >
       </div>
       <div class="form-group">
         <label for="movie-rating">Điểm:</label>
-        <input type="number" id="movie-rating" name="movie-rating" required>
+        <input type="number"  formControlName="diem" placeholder="Điểm"   class="form-control">
       </div>
       <div class="form-group">
         <label for="movie-year">Năm:</label>
-        <input type="date" id="movie-year" name="movie-year" required>
+        <input type="date"  formControlName="nam" placeholder="Ảnh"  class="form-control">
       </div>
       <div class="form-group">
         <label for="movie-video">Video:</label>
-        <input type="url" id="movie-video" name="movie-video" required>
+        <input type="text"  formControlName="video" placeholder="Video"  class="form-control">
       </div>
       <div class="form-group">
         <label for="movie-description">Mô tả:</label>
-        <textarea id="movie-description" name="movie-description" rows="5" required></textarea>
+        <textarea  formControlName="desc" placeholder="Mô tả" rows="5" ></textarea>
       </div>
       <div class="form-group">
         <button type="submit">Cập Nhật</button>

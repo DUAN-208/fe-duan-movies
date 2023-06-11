@@ -1,5 +1,5 @@
 export interface IMovie{
-        _id?:string|number
+        _id?:string,
         name:string ,
         img:string,
         diem:string|number ,

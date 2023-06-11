@@ -29,12 +29,12 @@
                                 <td>{{movies.name}}</td>
                                 <td><img src=" ../../../assets/imgs/card-img1.jpg" alt=""></td>
                                 <td>{{ movies.diem }}</td>
-                                <td>500mb</td>
+                                <td>{{ movies.video}}</td>
                                 <td>{{ movies.nam }}</td>
                                 <td>{{movies.desc}}</td>
                                 <td >
-                                    <button class="remove" >Xóa</button> 
-                                   <a href="admin/edit-movies"><button class="edit">Edit</button></a> 
+                                    <button class="btn btn-danger"(click)="removeItem(movies._id)!"> Xóa </button>
+                                    <a [routerLink]="'edit-movies/' + movies._id"><button class="edit">Sửa</button></a>
                                 </td>
                             </tr>
                             
