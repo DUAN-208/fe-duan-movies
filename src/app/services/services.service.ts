@@ -11,8 +11,6 @@ export class MovieService {
   getMovies () : Observable<any>{
     return this.http.get<IMovie[]>(`http://localhost:8080/api/movies`)
   }
-  deleteMovies(id: any): Observable<IMovie> {
-    return this.http.delete<IMovie>(`http://localhost:8080/api/movies/${id}`);
-  }
+  
   
 }
