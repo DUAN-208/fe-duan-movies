@@ -12,4 +12,5 @@ export class MovieService {
     return this.http.get<IMovie[]>(`http://localhost:8080/api/movies`)
   }
   
+  
 }

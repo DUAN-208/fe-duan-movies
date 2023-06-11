@@ -31,7 +31,7 @@ const routes: Routes = [
     {path: 'list-movies', component:ListMoviesComponent },
     {path:'add-movies',component:AddMoviesPageComponent},
     {path: 'list-user', component:ListUserComponent},
-    {path:'edit-movies',component:EditMoviesPageComponent},
+    {path:'edit-movies/:id',component:EditMoviesPageComponent},
   ]},
   {path:'**',component:NotFoundComponent}
 
