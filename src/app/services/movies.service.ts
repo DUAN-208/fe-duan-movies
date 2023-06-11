@@ -12,4 +12,14 @@ export class MoviesService {
   AddMovies(movie:IMovie):Observable<any> {
     return this.http.post('http://localhost:8080/api/movies',movie)
    }
+  getMoreDataMovies(page:number):Observable<any>{
+    const url= `http://localhost:8080/api/movies?_page=${page}`
+    return this.http.get(url) 
+  }
+  getAllMovies():Observable<any>{
+    return this.http.get('http://localhost:8080/api/movies')
+  }
+  getMovieNew():Observable<any>{
+    return this.http.get('http://localhost:8080/api/movies?_limit=10')
+  }
 }

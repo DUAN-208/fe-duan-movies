@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IMovie } from 'src/app/interfaces/movie';
-import { MovieService } from 'src/app/services/services.service';
+import { MoviesService } from 'src/app/services/movies.service';
 
 @Component({
   selector: 'app-movies-page',
@@ -8,13 +8,19 @@ import { MovieService } from 'src/app/services/services.service';
   styleUrls: ['./movies-page.component.css']
 })
 export class MoviesPageComponent implements OnInit {
-
-  movies : IMovie[] = [];
-  constructor (private MovieService: MovieService){}
-  ngOnInit(): void {
-    this.MovieService.getMovies().subscribe(res => {
-      this.movies = res.docs;
-      console.log(this.movies);
+  currentPage = 1
+  movies!: IMovie[] ;
+  constructor (private MovieService: MoviesService){}
+  loadDataMovies(){
+  this.MovieService.getMoreDataMovies(this.currentPage).subscribe(data => {
+      this.movies = data.docs;
     })
+  }
+   ngOnInit(): void {
+       this.loadDataMovies()
+   }
+  loadMore(){
+    this.currentPage++
+    this.loadDataMovies()
   }
 }

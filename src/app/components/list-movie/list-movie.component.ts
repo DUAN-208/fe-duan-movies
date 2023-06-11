@@ -1,5 +1,7 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import KeenSlider, { KeenSliderInstance } from 'keen-slider';
+import { IMovie } from 'src/app/interfaces/movie';
+import { MoviesService } from 'src/app/services/movies.service';
 @Component({
   selector: 'app-list-movie',
   templateUrl: './list-movie.component.html',
@@ -9,6 +11,14 @@ export class ListMovieComponent {
   @ViewChild('sliderRef') sliderRef!: ElementRef<HTMLElement>;
 
   private slider: KeenSliderInstance | null = null;
+  movies!:IMovie[]
+  constructor(private moviesService: MoviesService){
+    this.moviesService.getMovieNew().subscribe(data=>{
+      this.movies= data.docs
+      
+    })
+  }
+
 
   ngAfterViewInit() {
     this.slider = new KeenSlider(this.sliderRef.nativeElement, {
