@@ -24,6 +24,7 @@ import { AddMoviesPageComponent } from './pages/admin/add-movies-page/add-movies
 
 import { ListUserComponent } from './pages/admin/list-user/list-user.component';
 import { EditMoviesPageComponent } from './pages/admin/edit-movies-page/edit-movies-page.component';
+import { EditUserPageComponent } from './pages/admin/edit-user-page/edit-user-page.component';
 
 
 
@@ -47,6 +48,7 @@ import { EditMoviesPageComponent } from './pages/admin/edit-movies-page/edit-mov
     AddMoviesPageComponent,
     ListUserComponent,
     EditMoviesPageComponent,
+    EditUserPageComponent,
   ],
   imports: [
     BrowserModule,

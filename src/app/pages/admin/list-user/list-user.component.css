@@ -553,7 +553,10 @@ table tbody tr {
    color: white;
    border-radius: 10px;
 }
+.edit a{
+  color: white;
 
+}
 
 
 
