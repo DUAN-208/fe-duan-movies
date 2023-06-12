@@ -17,5 +17,5 @@ export class ListUserComponent implements OnInit {
       console.log(this.users);
     })
   }
-
+  
 }

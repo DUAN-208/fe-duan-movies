@@ -34,7 +34,7 @@
                                 <td>{{movies.desc}}</td>
                                 <td >
                                     <button class="btn btn-danger"(click)="removeItem(movies._id)!"> Xóa </button>
-                                    <a [routerLink]="'edit-movies/' + movies._id"><button class="edit">Sửa</button></a>
+                                    <a href="/admin/edit-movies/{{movies._id}}"> <button class="edit">Sửa</button> </a>
                                 </td>
                             </tr>
                             
