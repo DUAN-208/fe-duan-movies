@@ -1,32 +1,39 @@
-<div class="container--add">
+<div class="container--add" >
     <h2 class="title-add">Cập Nhật Phim</h2>
-    <form>
-      <div class="form-group">
-        <label for="movie-name">Tên phim:</label>
-        <input type="text" formControlName="name"  placeholder="Tên" class="form-control">
-      </div>
-      <div class="form-group">
-        <label for="movie-image">Ảnh phim:</label>
-        <input type="file" formControlName="img" placeholder="img"  class="form-control"  >
-      </div>
-      <div class="form-group">
-        <label for="movie-rating">Điểm:</label>
-        <input type="number"  formControlName="diem" placeholder="Điểm"   class="form-control">
-      </div>
-      <div class="form-group">
-        <label for="movie-year">Năm:</label>
-        <input type="date"  formControlName="nam" placeholder="Ảnh"  class="form-control">
-      </div>
+    <form (ngSubmit)="onHanldeEditMovie()" [formGroup]="formMovie">
+      
+          <div class="form-group">
+            <label for="movie-name">Tên phim:</label>
+            <input type="text" id="movie-name" name="movie-name" formControlName="name">
+          </div>
+
+          <div class="form-group">
+            <label for="movie-image">Ảnh phim:</label>
+            <input type="url" id="movie-image" name="movie-image" formControlName="img" >
+          </div>
+
+        <div class="form-group">
+          <label for="movie-rating">Điểm:</label>
+          <input type="text" id="movie-rating" name="movie-rating" formControlName="diem" >
+        </div>
+      
+        <div class="form-group">
+          <label for="movie-year">Năm:</label>
+          <input type="text" id="movie-year" name="movie-year" formControlName="nam" >
+        </div>
+      
       <div class="form-group">
         <label for="movie-video">Video:</label>
-        <input type="text"  formControlName="video" placeholder="Video"  class="form-control">
+        <input type="url" id="movie-video" formControlName="video" name="movie-video" >
       </div>
+
       <div class="form-group">
         <label for="movie-description">Mô tả:</label>
-        <textarea  formControlName="desc" placeholder="Mô tả" rows="5" ></textarea>
+        <textarea id="movie-description" name="movie-description" rows="5" formControlName="desc" ></textarea>
       </div>
-      <div class="form-group">
-        <button type="submit">Cập Nhật</button>
-      </div>
-    </form>
+
+       <div class="form-group">
+            <button type="submit" >Sửa phim</button>
+          </div>
+      </form>
   </div>

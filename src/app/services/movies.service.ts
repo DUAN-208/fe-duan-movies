@@ -16,7 +16,7 @@ export class MoviesService {
     return this.http.get(`http://localhost:8080/api/movies/${id}`)
   }
   updateMovies(movie: IMovie): Observable<IMovie> {
-    return this.http.patch<any>(`http://localhost:8080/api/products/${movie._id}`, movie)
+    return this.http.patch<any>(`http://localhost:8080/api/movies/${movie._id}`, movie)
   }
   getMoreDataMovies(page:number):Observable<any>{
     const url= `http://localhost:8080/api/movies?_page=${page}`
