@@ -19,9 +19,15 @@ export class ListUserComponent implements OnInit {
     })
   }
   onHandleRemove(id:any){
-    this.userService.deleteUser(id).subscribe(()=>{
-      this.users = this.users.filter(item=>item._id!==id)
+    this.userService.deleteUser(id).subscribe((data)=>{
+      if(data == 1){
+        Swal.fire('Thất bại', 'Xóa user thất bại!', 'info');
+        }else{
+          this.users = this.users.filter(item=>item._id!==id)
       Swal.fire('Thành công', 'Xóa user thành công!', 'success');
+        }
+        
+     
 
     })
     

@@ -54,8 +54,14 @@ export class EditMoviesPageComponent {
           desc: this.formMovie.value.desc ||'',
         }
         this.moviesService.updateMovies(movies).subscribe(data => {
-          Swal.fire(' Thành công ', ' Update Movies thành công !', 'success');
+          if(data == 1){
+            Swal.fire('Thất bại', 'Update Movies thất bại!', 'info');
+            }else{
+              Swal.fire(' Thành công ', ' Update Movies thành công !', 'success');
           this.router.navigate(['/admin/list-movies'])
+            }
+            
+          
         })
       }
   
