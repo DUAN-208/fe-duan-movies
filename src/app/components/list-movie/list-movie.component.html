@@ -4,7 +4,7 @@
           <div *ngFor="let movies of movies"  
            class="card-movies" style="background-image: url(../../../assets/imgs/card-img1.jpg)">
             <div class="bg-card"></div>
-            <p class="card-movies-btn"><a routerLink="/movies/1">Watch</a></p>
+            <p class="card-movies-btn"><a routerLink="/movies/{{movies._id}}">Watch</a></p>
             <div class="card-des">
               <p class="card-point">{{ movies.diem }}</p>
               <p class="card-year">{{ movies.nam }}</p>
