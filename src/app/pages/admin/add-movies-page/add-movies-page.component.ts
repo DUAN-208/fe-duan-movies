@@ -36,8 +36,14 @@ export class AddMoviesPageComponent {
           
         }
         this.moviesService.AddMovies(product).subscribe(data => {
-          Swal.fire('Thành công', 'Thêm movies thành công!', 'success');
+          if(data == 1){
+            Swal.fire('Thất bại', 'Thêm sản phẩm thất bại!', 'info');
+            }else{
+              Swal.fire('Thành công', 'Thêm movies thành công!', 'success');
           this.router.navigate(['/admin/list-movies'])
+            }
+            
+          
         })
       }
   

@@ -50,9 +50,15 @@ export class EditUserPageComponent {
         password:this.formUser.value.password || "",
         role:this.formUser.value.role || "",
       }
-      this.userService.updateUser(newUser).subscribe(()=>{
-        Swal.fire('Thành công', 'Xóa user thành công!', 'success');
+      this.userService.updateUser(newUser).subscribe((data)=>{
+        if(data == 1){
+          Swal.fire('Thất bại', 'Xóa movies thất bại!', 'info');
+          }else{
+            Swal.fire('Thành công', 'Cập nhật user thành công!', 'success');
         this.router.navigate(['admin/list-user'])
+          }
+          
+        
       })
 
     }
