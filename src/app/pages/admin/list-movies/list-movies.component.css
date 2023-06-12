@@ -404,6 +404,7 @@ input, button, select {
 
 table {
     border-collapse: collapse;
+    width: 100%;
 }
 
 table thead tr {
@@ -436,7 +437,9 @@ table tbody td:first-child {
 table tbody tr {
     border-bottom: 1px solid #dee2e8;
 }
-
+.table-img img{
+    padding: 20px;
+}
 .client {
     display: flex;
     align-items: center;

@@ -28,7 +28,7 @@ export class EditMoviesPageComponent {
     private router:Router){
       this.route.paramMap.subscribe(param => {
         const id = String(param.get('id'));
-        this.moviesService.getProductById(id).subscribe(movies => {
+        this.moviesService.getMovieById(id).subscribe(movies => {
           this.movies = movies;
           this.formMovie.patchValue({
             name: movies.name,

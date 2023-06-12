@@ -19,6 +19,7 @@ export class ListMoviesComponent implements OnInit {
   }
   removeItem(id: any) {
     this.MoviesService.deleteMovies(id).subscribe(() => {
+      this.movies = this.movies.filter(item=> item._id !==id)
       Swal.fire('Thành công', 'Xóa movies thành công!', 'success');
     })
   }
