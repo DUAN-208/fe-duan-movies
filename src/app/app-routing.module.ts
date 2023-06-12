@@ -15,6 +15,7 @@ import { ListMoviesComponent } from './pages/admin/list-movies/list-movies.compo
 import { AddMoviesPageComponent } from './pages/admin/add-movies-page/add-movies-page.component';
 import { ListUserComponent } from './pages/admin/list-user/list-user.component';
 import { EditMoviesPageComponent } from './pages/admin/edit-movies-page/edit-movies-page.component';
+import { EditUserPageComponent } from './pages/admin/edit-user-page/edit-user-page.component';
 
 const routes: Routes = [
   {path:'',component:BaseLayoutClientComponent,children:[
@@ -31,6 +32,7 @@ const routes: Routes = [
     {path: 'list-movies', component:ListMoviesComponent },
     {path:'add-movies',component:AddMoviesPageComponent},
     {path: 'list-user', component:ListUserComponent},
+    {path: 'edit-user/:id',component: EditUserPageComponent},
     {path:'edit-movies/:id',component:EditMoviesPageComponent},
   ]},
   {path:'**',component:NotFoundComponent}
