@@ -28,7 +28,7 @@ export class EditMoviesPageComponent {
     private router:Router){
       this.route.paramMap.subscribe(param => {
         const id = String(param.get('id'));
-        this.moviesService.getProductById(id).subscribe(movies => {
+        this.moviesService.getMovieById(id).subscribe(movies => {
           this.movies = movies;
           this.formMovie.patchValue({
             name: movies.name,
@@ -54,8 +54,14 @@ export class EditMoviesPageComponent {
           desc: this.formMovie.value.desc ||'',
         }
         this.moviesService.updateMovies(movies).subscribe(data => {
-          Swal.fire(' Thành công ', ' Update Movies thành công !', 'success');
+          if(data == 1){
+            Swal.fire('Thất bại', 'Update Movies thất bại!', 'info');
+            }else{
+              Swal.fire(' Thành công ', ' Update Movies thành công !', 'success');
           this.router.navigate(['/admin/list-movies'])
+            }
+            
+          
         })
       }
   

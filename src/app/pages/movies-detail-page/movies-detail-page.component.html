@@ -11,9 +11,9 @@
           <img src="../../../assets/imgs/card-img1.jpg" alt="" />
         </div>
         <div class="movies-detail-des">
-          <h4 class="movies-detail-title">The Super Mario Bros. Movie</h4>
+          <h4 class="movies-detail-title">{{movie.name}}</h4>
           <div class="movies-detail-categories">
-            <p class="point">6.5</p>
+            <p class="point">{{movie.diem}}</p>
             <div class="categories-movies-detail">
               <p>Animation</p>
               <p>Family</p>
@@ -21,24 +21,13 @@
             </div>
           </div>
           <div class="des-detail-movies">
-            While working underground to fix a water main, Brooklyn plumbers—and
-            brothers—Mario and Luigi are transported down a mysterious pipe and
-            wander into a magical new world. But when the brothers are separated,
-            Mario embarks on an epic quest to find Luigi.
+            {{movie.desc}}
           </div>
         </div>
       </div>
       <div class="movies-video">
         <div class="loading-spinner"></div>
-        <iframe
-          width="1268"
-          height="900"
-          src="https://www.youtube.com/embed/TnGl01FkMMo"
-          title="The Super Mario Bros. Movie | Official Trailer"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
+        {{movie.video}}
       </div>
     </div>
   </div>

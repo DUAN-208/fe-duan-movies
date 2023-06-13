@@ -23,7 +23,8 @@ export class LoginPageComponent {
     onHandleLogin() {
       if (this.formLogin.valid) {
         this.authSingin.login(this.formLogin.value).subscribe(data => {
-          localStorage.setItem('data',JSON.stringify(data))
+          
+          localStorage.setItem('token',JSON.stringify(data.accessToken))
           
           if(!data.user){
             Swal.fire('Thất bại', 'Tài khoản hoặc mật khẩu không đúng!', 'info');

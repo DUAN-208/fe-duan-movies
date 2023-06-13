@@ -14,12 +14,18 @@ export class ListMoviesComponent implements OnInit {
   ngOnInit(): void {
     this.MoviesService.getAllMovies().subscribe(data => {
       this.movies = data.docs;
-      console.log(this.movies);
     })
   }
   removeItem(id: any) {
-    this.MoviesService.deleteMovies(id).subscribe(() => {
-      Swal.fire('Thành công', 'Xóa movies thành công!', 'success');
+    this.MoviesService.deleteMovies(id).subscribe((data) => {
+      if(data == 1){
+      Swal.fire('Thất bại', 'Xóa movies thất bại!', 'info');
+      }else{
+        this.movies = this.movies.filter(item=> item._id !==id)
+        Swal.fire('Thành công', 'Xóa movies thành công!', 'success');
+      }
+      
+      
     })
   }
 

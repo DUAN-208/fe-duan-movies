@@ -23,15 +23,15 @@
                           </tr>
                       </thead>
                       <tbody>
-                          <tr  *ngFor="let users of users ; index as i" >
+                          <tr  *ngFor="let user of users ; index as i" >
                               <td>{{ i + 1}}</td>
-                              <td>{{ users.name}}</td>
-                              <td>{{ users.email}}</td>
-                              <td>{{ users.password}}</td>
-                              <td>{{ users.role}}</td>
+                              <td>{{ user.name}}</td>
+                              <td>{{ user.email}}</td>
+                              <td>{{ user.password}}</td>
+                              <td>{{ user.role}}</td>
                               <td >
-                                  <button class="remove" >Xóa</button>
-                                  <button class="edit">Edit</button>
+                                  <button class="remove" (click)="onHandleRemove(user._id)" >Xóa</button>
+                                  <button class="edit" ><a href="/admin/edit-user/{{user._id}}">Edit</a> </button>
                               </td>
                           </tr>
                       </tbody>

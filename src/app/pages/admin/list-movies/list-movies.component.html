@@ -11,7 +11,7 @@
             <button class="add"><a href="admin/add-movies"> Add Movies</a></button>
                 </div>
                 <div >
-                    <table width="100%">
+                    <table >
                         <thead>
                             <tr>
                                 <th>STT</th>
@@ -21,13 +21,14 @@
                                 <th> Video</th>
                                 <th> Năm</th>
                                 <th> Mô tả</th>
+                                <th> Option</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr *ngFor="let movies of movies ; index as i" >
                                 <td>{{i + 1}}</td>
                                 <td>{{movies.name}}</td>
-                                <td><img src=" ../../../assets/imgs/card-img1.jpg" alt=""></td>
+                                <td class="table-img"><img src=" ../../../assets/imgs/card-img1.jpg" alt=""></td>
                                 <td>{{ movies.diem }}</td>
                                 <td>{{ movies.video}}</td>
                                 <td>{{ movies.nam }}</td>
